@@ -19,11 +19,13 @@ namespace TestTaskWeather
             request.Method = "POST";
             WebResponse response = await request.GetResponseAsync();
 
+            //answer with memory
             string answer = string.Empty;
             using (Stream s = response.GetResponseStream())
             {
                 using (StreamReader reader = new StreamReader(s))
                 {
+                    //get answer in JSON 
                     answer = await reader.ReadToEndAsync();
                 }
             }

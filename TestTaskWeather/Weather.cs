@@ -33,7 +33,7 @@ namespace TestTaskWeather
         {
             public DailyData[] daily;
             public string name;
-        public CurrentData current;
+            public CurrentData current;
       
         }
     
